@@ -1,0 +1,22 @@
+extends base
+
+block content
+    div
+        form(method="POST", enctype="multipart/form-data")
+            label(for="audio") audio File
+            input#audio(type="file", accept="audio/*", required, name="audio")
+            label(for="thumb") Thumbnail File
+            input#thumb(type="file", accept="image/*", required, name="thumb")
+            input(
+                placeholder="Title",
+                required,
+                type="text",
+                name="title",
+                maxlength=20)
+            input(
+                placeholder="Artist",
+                required,
+                type="text",
+                name="artist",
+                minlength=20)
+            input(type="submit", value="Upload audio")

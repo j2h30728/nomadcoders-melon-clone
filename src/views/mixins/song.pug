@@ -1,0 +1,8 @@
+mixin song(song)
+  a.song-mixin(href=`/songs/${song.id}`)
+    .song-mixin__thumb
+    .song-mixin__data
+      span.song-mixin__title= song.title
+      .song-mixin__meta
+        span #{ song.artist } •
+        span #{ song.meta.playing } 회

@@ -1,4 +1,9 @@
 extends base
+include mixins/song
 
 block content
     div
+        each song in songs.sort((a,b)=>  b.meta.playing-a.meta.playing )
+            +song(song)
+        else 
+            span No songs found
