@@ -3,7 +3,7 @@ import morgan from "morgan";
 import session from "express-session";
 import flash from "express-flash";
 import MongoStore from "connect-mongo";
-import { localsMiddleware } from "./middlewares";
+import { localsMiddleware } from "./routers/middlewares";
 import rootRouter from "./routers/rootRouter";
 import songRouter from "./routers/songRouter";
 import apiRouter from "./routers/apiRouter";
